@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/shared/Navbar";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={cn(montserrat?.className, "antialiased")}>
+        <Navbar />
         {children}
       </body>
     </html>

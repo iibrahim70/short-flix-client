@@ -119,4 +119,30 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  h1 {
+    @apply text-5xl lg:text-6xl font-bold;
+  }
+  h2 {
+    @apply text-4xl lg:text-5xl  font-bold;
+  }
+  h3 {
+    @apply text-3xl lg:text-4xl font-bold;
+  }
+  h4 {
+    @apply text-2xl lg:text-3xl font-bold;
+  }
+  h5 {
+    @apply text-xl lg:text-2xl font-bold;
+  }
+  h6 {
+    @apply text-lg lg:text-xl font-bold;
+  }
+  p {
+    @apply text-sm text-muted-foreground;
+  }
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-3.5 sm:px-5 md:px-7 lg:px-10;
 }
