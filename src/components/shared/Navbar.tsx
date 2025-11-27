@@ -1,21 +1,41 @@
-import { Search } from "lucide-react";
-import { Input } from "../ui/input";
+"use client";
 
-const Navbar = () => {
+import { Search } from "lucide-react";
+import { Input } from "../ui";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
+
+export const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const navItems = ["Home", "Tv Shows", "Movies", "Recently Added", "My List"];
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window?.scrollY > 0);
+
+    // Handle scroll for navbar styling
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup when component unmounts
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="py-5 sticky left-0 top-0 z-10 bg-neutral-900 border-b">
+    <nav
+      className={cn(
+        "py-5 fixed top-0 w-full z-50 border-b transition-colors duration-300",
+        isScrolled ? "bg-black" : "bg-transparent"
+      )}
+    >
       <div className="container flex items-center justify-between gap-5">
         {/* Left side */}
-        <h5 className="text-red-500">Shortflix</h5>
+        <h5 className="text-primary uppercase">Shortflix</h5>
 
         {/* Middle */}
         <ul className="flex items-center justify-center gap-5 text-sm font-medium">
           {navItems?.map((item) => (
             <li
               key={item}
-              className="cursor-pointer transition-all duration-300 hover:text-red-500 hover:underline underline-offset-10"
+              className="cursor-pointer transition-all duration-300 hover:text-primary hover:underline underline-offset-10"
             >
               {item}
             </li>
@@ -38,5 +58,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;
