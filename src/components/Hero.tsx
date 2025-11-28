@@ -4,7 +4,7 @@ import { Button } from "./ui";
 
 export const Hero = () => {
   return (
-    <div className="relative h-dvh w-full overflow-hidden">
+    <section className="relative h-dvh w-full overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-zinc-950/40 to-transparent z-10" />
 
       <Image
@@ -43,6 +43,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
