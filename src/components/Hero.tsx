@@ -15,17 +15,19 @@ export const Hero = () => {
       />
 
       <div className="absolute bottom-[130px] z-20 w-full">
-        <div className="container">
-          <div className="flex items-center gap-2.5 text-primary font-bold tracking-widest text-sm pb-2.5">
-            <Film className="size-4" />
-            <span>N E W R E L E A S E</span>
+        <div className="container space-y-3.5">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2.5 text-primary font-bold tracking-widest text-sm">
+              <Film className="size-4" />
+              <span>N E W R E L E A S E</span>
+            </div>
+
+            <h1 className="font-black text-white drop-shadow-lg uppercase">
+              The Witcher
+            </h1>
           </div>
 
-          <h1 className="font-black text-white drop-shadow-lg uppercase pb-3.5">
-            The Witcher
-          </h1>
-
-          <p className="text-gray-200 text-base mb-5">
+          <p className="text-gray-200 text-base text-justify">
             Dive into the dark fantasy world of The Witcher, where monsters
             roam, destinies collide, and every choice can change fate. Join
             Geralt of Rivia on a thrilling journey filled with magic, danger,

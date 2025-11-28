@@ -31,7 +31,7 @@ export const Navbar = () => {
         <h5 className="text-primary uppercase">Shortflix</h5>
 
         {/* Middle */}
-        <ul className="flex items-center justify-center gap-5 text-sm font-medium">
+        <ul className="max-lg:hidden flex items-center justify-center gap-5 text-sm font-medium">
           {navItems?.map((item) => (
             <li
               key={item}
@@ -43,7 +43,7 @@ export const Navbar = () => {
         </ul>
 
         {/* Right side */}
-        <div className="flex items-center gap-2.5">
+        <div className="max-lg:hidden flex items-center gap-2.5">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-400" />
 

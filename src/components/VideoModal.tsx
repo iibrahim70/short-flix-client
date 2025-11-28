@@ -29,7 +29,7 @@ export const VideoModal = ({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute -top-5 -right-10 size-10 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-colors"
+          className="absolute -top-10 right-0 lg:-top-5 lg:-right-10 size-10 rounded-full bg-primary/85 hover:bg-primary flex items-center justify-center transition-colors"
         >
           <X className="size-5" />
         </button>
